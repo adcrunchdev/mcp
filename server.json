@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "dev.adcrunch/mcp",
   "title": "AdCrunch",
-  "description": "Ask AI about your ads — query Meta, TikTok, and Google Ads campaigns, performance, and creative in natural language.",
+  "description": "Ask AI about your ads — query Meta, TikTok, and Google Ads performance in natural language.",
   "version": "1.0.0",
   "websiteUrl": "https://adcrunch.dev",
   "repository": {
