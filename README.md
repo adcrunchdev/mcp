@@ -2,7 +2,7 @@
 
 **Ask AI about your ads.** AdCrunch is a remote [MCP](https://modelcontextprotocol.io) server that connects **Meta Ads, TikTok Ads, and Google Ads** to AI agents like Claude, ChatGPT, and Cursor — query campaign setup and performance in natural language, no dashboards needed.
 
-- **Server URL:** `https://mcp.adcrunch.dev` (streamable HTTP, OAuth)
+- **Server URL:** `https://mcp.adcrunch.dev/mcp` (streamable HTTP, OAuth)
 - **Website:** [adcrunch.dev](https://adcrunch.dev?utm_source=github&utm_medium=directory)
 - **Docs:** [docs.adcrunch.dev](https://docs.adcrunch.dev)
 - **Security:** read-only access to your ad platforms by default; credentials are never exposed to the AI model.
@@ -13,7 +13,7 @@
 
 ### Claude (claude.ai / Claude Desktop)
 
-Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev`, then authorize with your AdCrunch account.
+Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev/mcp`, then authorize with your AdCrunch account.
 
 ### Cursor
 
@@ -23,7 +23,7 @@ Add to your MCP settings (`.cursor/mcp.json`):
 {
   "mcpServers": {
     "adcrunch": {
-      "url": "https://mcp.adcrunch.dev"
+      "url": "https://mcp.adcrunch.dev/mcp"
     }
   }
 }
@@ -31,7 +31,7 @@ Add to your MCP settings (`.cursor/mcp.json`):
 
 ### ChatGPT
 
-Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev`.
+Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev/mcp`.
 
 Full per-client guides: [docs.adcrunch.dev](https://docs.adcrunch.dev).
 
