@@ -1,5 +1,7 @@
 # AdCrunch MCP Server
 
+[![smithery badge](https://smithery.ai/badge/adcrunch/adcrunch)](https://smithery.ai/servers/adcrunch/adcrunch)
+
 **Ask AI about your ads.** AdCrunch is a remote [MCP](https://modelcontextprotocol.io) server that connects **Meta Ads, TikTok Ads, and Google Ads** to AI agents like Claude, ChatGPT, and Cursor — query campaign setup and performance in natural language, no dashboards needed.
 
 - **Server URL:** `https://mcp.adcrunch.dev/mcp` (streamable HTTP, OAuth)
