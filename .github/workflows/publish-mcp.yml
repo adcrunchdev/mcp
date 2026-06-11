@@ -1,0 +1,45 @@
+name: Publish to MCP Registry
+
+# Publishes dev.adcrunch/mcp to the official MCP Registry on every version tag.
+# This is a remote server (streamable-http), so there is no package to build or
+# upload — the registry only stores metadata pointing at https://mcp.adcrunch.dev/mcp.
+#
+# The git tag drives the published version: pushing `v1.0.2` publishes 1.0.2.
+# This avoids "cannot publish duplicate version" errors — each tag is unique.
+
+on:
+  push:
+    tags: ['v*'] # e.g. v1.0.2
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Install mcp-publisher
+        run: |
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+
+      # Authenticate on the `dev.adcrunch` namespace via the apex TXT record on
+      # adcrunch.dev. The private key matching that record is stored as a repo
+      # secret (see README / repo settings → Secrets → MCP_PRIVATE_KEY).
+      - name: Authenticate to MCP Registry
+        env:
+          MCP_PRIVATE_KEY: ${{ secrets.MCP_PRIVATE_KEY }}
+        run: ./mcp-publisher login dns --domain adcrunch.dev --private-key "$MCP_PRIVATE_KEY"
+
+      # Set server.json's version from the tag so the tag is the single source
+      # of truth (strips the leading `v`: v1.0.2 -> 1.0.2).
+      - name: Set version from tag
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/v}"
+          jq --arg v "$VERSION" '.version = $v' server.json > server.tmp && mv server.tmp server.json
+          echo "Publishing version $VERSION"
+
+      - name: Publish server to MCP Registry
+        run: ./mcp-publisher publish
