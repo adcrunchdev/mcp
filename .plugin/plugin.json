@@ -1,7 +1,7 @@
 {
   "name": "adcrunch",
   "version": "1.0.0",
-  "description": "Ask AI about your ads. AdCrunch connects Meta, TikTok, and Google Ads to AI agents like Claude, ChatGPT, and Cursor — query campaigns, performance (spend, ROAS, CPA), and ad creative in natural language via a remote MCP server. Read-only OAuth by default; free during early access.",
+  "description": "Ask AI about your ads. AdCrunch connects Meta, TikTok, and Google Ads to Claude and ChatGPT — query campaigns, performance (spend, ROAS, CPA), and ad creative in natural language via a remote MCP server. Read-only OAuth by default; free during early access.",
   "author": {
     "name": "AdCrunch",
     "email": "support@adcrunch.dev",
