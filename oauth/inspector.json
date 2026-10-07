@@ -1,0 +1,11 @@
+{
+  "client_id": "https://adcrunchdev.github.io/mcp/oauth/inspector.json",
+  "client_name": "AdCrunch MCP Inspector (dev)",
+  "redirect_uris": [
+    "http://localhost:6274/oauth/callback",
+    "http://localhost:6274/oauth/callback/debug"
+  ],
+  "token_endpoint_auth_method": "none",
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"]
+}
