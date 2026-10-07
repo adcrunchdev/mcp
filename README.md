@@ -39,16 +39,7 @@ Full per-client guides: [docs.adcrunch.dev](https://docs.adcrunch.dev).
 
 ## Tools
 
-| Tool | What it does |
-|---|---|
-| `list_advertisers` | Connected ad accounts across platforms |
-| `list_campaigns` | Campaigns for an advertiser |
-| `list_ad_groups` | Ad-group structure |
-| `list_ads` | Individual ads |
-| `query_insights` | Time-series performance: spend, ROAS, CPA, impressions, clicks, conversions |
-| `search_ads` | Search ad creative |
-| `skill_list` / `skill_get` | Discover and fetch your org's reusable ad-ops playbooks |
-| `skill_create` / `skill_update` / `skill_delete` | Author and maintain playbooks (Skills store) |
+Every tool, with its inputs and its outputs, is in the [tool reference](https://docs.adcrunch.dev/mcp?utm_source=github&utm_medium=directory).
 
 ## Example questions
 
