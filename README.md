@@ -7,7 +7,7 @@
 - **Server URL:** `https://mcp.adcrunch.dev/mcp` (streamable HTTP, OAuth)
 - **Website:** [adcrunch.dev](https://adcrunch.dev?utm_source=github&utm_medium=directory)
 - **Docs:** [docs.adcrunch.dev](https://docs.adcrunch.dev)
-- **Security:** read-only access to your ad platforms by default; credentials are never exposed to the AI model.
+- **Security:** credentials are never exposed to the AI model.
 
 > Free during early access — no credit card. [Pricing](https://adcrunch.dev/?utm_source=github&utm_medium=directory#pricing).
 
