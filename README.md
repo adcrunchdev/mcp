@@ -17,6 +17,16 @@
 
 Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev/mcp`, then authorize with your AdCrunch account.
 
+### Claude Code
+
+Install the AdCrunch plugin from this repository:
+
+```
+/plugin install adcrunch --marketplace adcrunchdev/mcp
+```
+
+Then run `/mcp`, select **adcrunch**, and authorize with your AdCrunch account.
+
 ### ChatGPT
 
 Settings → **Connectors** → **Add custom connector** → `https://mcp.adcrunch.dev/mcp`.

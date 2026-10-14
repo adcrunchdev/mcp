@@ -1,0 +1,15 @@
+{
+  "name": "adcrunch",
+  "description": "The AdCrunch plugin for Claude Code: ask AI about your ads.",
+  "owner": {
+    "name": "AdCrunch",
+    "email": "support@adcrunch.dev",
+    "url": "https://adcrunch.dev"
+  },
+  "plugins": [
+    {
+      "name": "adcrunch",
+      "source": "./plugins/adcrunch"
+    }
+  ]
+}

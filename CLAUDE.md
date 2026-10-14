@@ -17,6 +17,8 @@ server is a remote Cloudflare Worker served at `https://mcp.adcrunch.dev/mcp`
 | `server.json`        | MCP Registry manifest (`dev.adcrunch/mcp`, remote endpoint)   |
 | `mcp.json`           | Client config for Open Plugins / cursor.directory auto-detect |
 | `.plugin/plugin.json`| Open Plugins manifest (metadata + logo)                       |
+| `.claude-plugin/marketplace.json` | Claude Code plugin marketplace that lists the `adcrunch` plugin |
+| `plugins/adcrunch/`  | Claude Code plugin: its manifest declares the remote MCP server |
 | `README.md`          | Public-facing install/usage docs                              |
 
 ## Git conventions
